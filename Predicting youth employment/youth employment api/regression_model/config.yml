@@ -1,0 +1,43 @@
+# Package Overview
+package_name: regression_model
+
+# Data Files
+training_data_file: train.csv
+test_data_file: test.csv
+
+# Variables
+# The variable we are attempting to predict (sale price)
+target: Total_empl0yed_IT_sector_agesex
+
+pipeline_name: regression_model
+pipeline_save_file: regression_model_output_v
+
+
+
+features:
+  - population
+  - total_inactive_population
+  - total_unemployed_population
+  - total_employed_population
+  - ref_area
+  - age_bracket
+  - sex
+
+# set train/test split
+test_size: 0.2
+
+# to set the random seed
+random_state: 0
+n_estimators: 50
+
+numerical_variables:
+  - population
+  - total_inactive_population
+  - total_unemployed_population
+  - total_employed_population
+
+categorical_vars:
+  - age_bracket
+  - sex
+  - ref_area
+
